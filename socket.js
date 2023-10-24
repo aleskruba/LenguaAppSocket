@@ -1,7 +1,7 @@
 const http = require('http');
 const socketIo = require('socket.io');
 
-const socketPort = 4000; // Port for the Socket.IO server
+const socketPort = process.env.PORT || 4000; 
 const server = http.createServer();
 const io = socketIo(server, {
   cors: {
