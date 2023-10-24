@@ -5,7 +5,7 @@ const socketPort = process.env.PORT || 4000;
 const server = http.createServer();
 const io = socketIo(server, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000','https://lenguaapp2client.onrender.com'],
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
     credentials: true,
